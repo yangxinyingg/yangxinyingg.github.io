@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html lang="zh-CN">
+<html lang="zh-CN">
+<head>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width initial-scale=1,user-scalable = 0">
+<title>出入登记--主校门进</title>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+var post_flag = false;
+function submitBtnClick(){
+    	var xmlhttp;
+    	var A11 = document.getElementById("XH");
+    	var A21 = document.getElementById("XM");
+    	var A31 = document.getElementById("DH");
+    	var A40 = document.getElementById("CPH");
+    	var A51 = document.getElementById("SY");
+    	var A61 = document.getElementById("BZ");
+    	var A71 = document.getElementById("TW1");
+    	var A72 = document.getElementById("TW2");
+    	var A81 = document.getElementById("doorid");
+    	var A82 = document.getElementById("doormc");
+    	var A99 = document.getElementById("TW0");
+    	var A100 = document.getElementById("bc");
+      if((A72.value == "" ||A72.value == null) && A99.value=="1")
+    	 	 {
+    	 	    alert("体温不能为空！");
+            return;
+         }
+      else{
+        window.location.href="./jx.html"
+          }
+        }
+</script>
+
+</head>
+<body class="bg-index">
+	<link href="./css/uiqr.min.css" rel="stylesheet">
+	<style>
+#formContent .hasError {
+	border: #ff0000 1px solid;
+}
+
+.wrap .content ul.mess li.link-3 .sexbox .radio-same,.wrap .content li.link-4 .vote-box .checkbox .checkbox-same
+	{
+	display: block;
+	width: auto;
+	float: none;
+	margin-bottom: 10px;
+}
+
+.wrap .content li.link-4 .vote-box .checkbox .checkbox-same .checkLable,.wrap .content ul.mess li.link-3 .sexbox .radio-same .LsexRadioLabel
+	{
+	margin-right: 5px;
+}
+
+ul.jieshaoform li p {
+	margin: 0;
+	padding: 0;
+	word-break: break-all;
+}
+
+.filename-details {
+	display: inline-block;
+	width: 154px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.masker {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.7);
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+}
+
+.masker-container {
+	width: 200px;
+	position: fixed;
+	top: 35%;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 105;
+	text-align: center;
+}
+
+.masker-container p {
+	color: #fff;
+	font-size: 14px;
+	margin: 15px 0;
+}
+
+select { /* 设置成可设置宽高，但仍不换行。如果想换行的话设置为block */
+	display: inline-block;
+	/* 设置宽度 */
+	width: 30%;
+}
+</style>
+
+	<div class="wrap">
+		<div class="banner">
+			<img src="https://imgapp.sau.edu.cn/eai/image/3/7586.png">
+		</div>
+		<div class="content">
+			<ul class="jieshaoform" style="margin-bottom: 10px;">
+				<li>
+					<p>
+						<span style="color: rgb(255, 0, 0);"><strong>根据沈航新疫防办相关文件要求，请您出入校园各场所时，积极配合进行检测和登记！多次进校当日只限一台设备使用！！！</strong>
+						</span>
+					</p></li>
+			</ul>
+			<form class="form-horizontal" id="formContent"
+				onSubmit="return false" method="post">
+				<ul class="mess show">
+
+
+					<li class="link-1" id="area_xuegonghao">
+						<div class="name-box">
+							<p class="name-title">
+								学&nbsp;&nbsp;工&nbsp;&nbsp;号<span style="color:#ffffff">*</span>
+							</p>
+							<input  type="text" class="form-control input-fill"
+								placeholder="" id="XH" value="173401010101"
+								name="xuegonghao">
+						</div></li>
+
+
+
+
+
+
+
+					<div id="d3"
+
+
+					>
+						<li class="link-1" id="area_shiyou">
+
+							<div class="name-box">
+								<p class="name-title">
+									体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;温<span
+										style="
+								color:#fe052e
+									">*</span> <input type="hidden" id="TW0" value="1" name="TW0">
+
+
+								</p>
+
+								<select class="dropdown-select" id="TW1" name="select">
+									<option value="36">36</option>
+									<option value="34">34</option>
+									<option value="35">35</option>
+									<option value="36">36</option>
+									<option value="37">37</option>
+									<option value="38">38</option>
+									<option value="39">39</option>
+								</select> . <select class="dropdown-select" id="TW2" name="shiyou">
+									<option value="">请选择</option>
+									<option value="9">9</option>
+									<option value="8">8</option>
+									<option value="7">7</option>
+									<option value="6">6</option>
+									<option value="5">5</option>
+									<option value="4">4</option>
+									<option value="3">3</option>
+									<option value="2">2</option>
+									<option value="1">1</option>
+									<option value="0">0</option>
+								</select>
+							</div></li>
+					</div>
+
+					<div class="footReturn" style="text-align:center">
+						    <input type="hidden" id="bc" value="1">
+						    <input type="hidden" id="doorid" value="1">
+							<input type="hidden" id="doormc" value="主校门进">
+							<input type="hidden" id="CPH" value="" name="chepaihao">
+							<input type="hidden" id="SY" value="值班" name="shiyou">
+							<input type="hidden" id="BZ" value="" name="beizhu">
+							<input type="hidden" id="DH" value="" name="shoujihao">
+							<input type="hidden" id="XM" value="" name="xingming">
+							<input type="hidden" id="LXR" value="null" name="lianxiren">
+
+
+
+
+
+
+
+						<input type="button" id="submit" class="submit" value="提交信息" onClick="submitBtnClick()">
+						</button>
+
+
+					</div>
+					<div class="final">
+						信息网络中心提供相关技术支持</br>
+					</div>
+				</ul>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

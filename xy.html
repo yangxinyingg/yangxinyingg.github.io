@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="JXU2NDQ3JXU0RTg2JXU2MjExJXU1NDI3JXU2QzQyJXU2QzQyJXU1Qjgx">
+    <title>沈阳航空航天大学洗浴预约</title>
+    <link href="./css/cc.css?id=0ca175b9c0f726a" rel="stylesheet" type="text/css">
+    <style>
+        @-webkit-keyframes pulse {
+            50% {
+                -webkit-transform: scale3d(1.2, 1.2, 1.2);
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+        @keyframes  pulse {
+            50% {
+                -webkit-transform: scale3d(1.2, 1.2, 1.2);
+                transform: scale3d(1.2, 1.2, 1.2);
+            }
+        }
+        .list-group {
+            padding: 1em;
+        }
+        .list-group-item {
+            font-size: 1.1em;
+            padding: 0.1em;
+            border: 0px;
+        }
+        .STYLE1 {font-size: 20px}
+    </style>
+</head>
+<body>
+
+<div id="app">
+            <div id ="color1" class="card border-0 text-center" style="color: #07c160">
+            <div class="card-body">
+                <h2 class="card-title" style="font-size: 1.8em;">沈航洗浴预约</h2>
+                <i class="animated infinite pulse fa p-4"><img id="icon"  src="./img/cc.png"></i>
+                <p id="showtime" class="card-text" style="font-size: 1.4em;">
+                    时间：2020-08-30 18:55:23
+                </p>
+
+                  <p class="card-text" style="font-size: 1.4em;">
+<!--
+                  <div class="btn">
+ <span class="work-tit3">
+								<a href="https://sauapp.sau.edu.cn/xyyy.do?uid=114514">取消预约</a></span>
+</div>
+-->
+
+                </p>
+            </div>
+        </div>
+
+        <ul id="color2" class="list-group list-group-flush" style="background-color: #07c160">
+            <li class="list-group-item bg-transparent d-flex text-white font-weight-bold">
+                <div style="min-width: 4em; text-align-last: justify;">预约姓名</div>：<div id="yyxm">人民阶级</div>
+            </li>
+            <li class="list-group-item bg-transparent d-flex text-white font-weight-bold">
+                <div style="min-width: 4em; text-align-last: justify;">预约学号</div>：<div id="yyxh">194819181949</div>
+            </li>
+            <li class="list-group-item bg-transparent d-flex" style="color: rgba(255, 255, 255, 0.8);">
+                <div style="min-width: 4em; text-align-last: justify;">洗浴时间</div>：<div id="yysj">2077-08-31 18:30:00</br>2077-08-31 19:30:00</div>
+            </li>
+                  </ul>
+    </div>
+ <div class="STYLE1">
+        <div align="center" class="STYLE2">信息网络中心提供相关技术支持</div>
+      </div>
+      <p>
+        <img src="./img/cc2.png">
+      </p>
+      <p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+        <form name="Costum" onsubmit="return applyForm()" target="posthere">
+          姓名:<br>
+          <input type="text" name="XM" value="巴枯宁">
+          <br>
+          学号:<br>
+          <input type="text" name="SH" value="18140530">
+          <br>
+          时间:<br>
+          <select class="dropdown-select"  id="SJ" name="select">
+                      <option value="00:00-00:00">00:00-00:00--国</option>
+                      <option value="10:30-11:30">10:30-11:30--家</option>
+                      <option value="11:30-12:30">11:30-12:30--制</option>
+                      <option value="12:30-13:30">12:30-13:30--度</option>
+                      <option value="13:30-14:30">13:30-14:30--和</option>
+                      <option value="14:30-15:30">14:30-15:30--无</option>
+                      <option value="15:30-16:30">15:30-16:30--政</option>
+                      <option value="16:30-17:30">16:30-17:30--府</option>
+                      <option value="17:30-18:30">17:30-18:30--状</option>
+                      <option value="18:30-19:30">18:30-19:30--态</option>
+          </select>
+          <br>
+          状态:<br>
+          <select class="dropdown-select"  id="SJ" name="select_ic">
+                      <option value="cc">cc</option>
+                      <option value="ccs">ccs</option>
+                      <option value="cc1">cc1</option>
+          </select>
+          <br>
+          <br>
+          <input type="submit" value="应用">
+        </form>
+      </div>
+      <iframe name="posthere" frameborder=0 width=0 height=0></iframe>
+      </p>
+    <script>
+      var c_time = new Date();
+      str = '时间：';
+      str+= c_time.getFullYear() + '-';
+      str+= c_time.getMonth() + 1 + '-';
+      str+= c_time.getDate() + ' ';
+
+      str+= completeDate(c_time.getHours()) + ':' + completeDate(c_time.getMinutes()) + ':' + completeDate(c_time.getSeconds());
+      document.getElementById('showtime').innerHTML=str;
+
+      function applyForm() {
+          var c_time = new Date();
+          str= c_time.getFullYear() + '-';
+          str+= c_time.getMonth() + 1 + '-';
+          str+= c_time.getDate() + ' ';
+          var XM = document.forms["Costum"]["XM"].value;
+          var SH = document.forms["Costum"]["SH"].value;
+          var SJ = document.forms["Costum"]["select"].value;
+          var LO = document.forms["Costum"]["select_ic"].value;
+          SJ = SJ.split('-');
+          document.getElementById('yyxm').innerHTML=XM;
+          document.getElementById('yyxh').innerHTML=SH;
+          document.getElementById('yysj').innerHTML=str+SJ[0]+':00<br>'+str+SJ[1]+':00';
+          document.getElementById("icon").src="./img/"+LO+".png";
+          if (LO=='cc1')
+          {
+            document.getElementById("color1").style.color="#fa5151";
+            document.getElementById("color2").style.backgroundColor="#fa5151";
+          }
+          else {
+            document.getElementById("color1").style.color="#07c160";
+            document.getElementById("color2").style.backgroundColor="#07c160";
+          }
+          window.scrollTo(0,0)
+          return;
+      }
+      function completeDate(value) {
+        return value < 10 ? "0"+value:value;
+      }
+
+    </script>
+</body>
+
+</html>
